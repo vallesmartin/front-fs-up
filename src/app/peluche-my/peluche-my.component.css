@@ -1,0 +1,69 @@
+.sale {
+  background: #1c1c1cf5;
+}
+
+.peluche-top-img {
+  height: 180px;
+}
+
+.peluche {
+  width: 20px;
+}
+
+.peluche-img {
+  height: 200px;
+}
+
+.acc {
+  position: absolute;
+  left: 29px;
+}
+
+.color {
+  position: absolute;
+  left: 16px;
+}
+
+.carrito {
+  color: white;
+}
+
+.carrito:hover {
+  color: yellow;
+}
+
+.favorito {
+  color: darkgreen;
+}
+
+.favorito:hover {
+  color: chartreuse;
+}
+
+.eliminar {
+  color: firebrick;
+}
+
+.eliminar:hover {
+  color: crimson;
+}
+
+.buy {
+  background-color: darkgreen;
+}
+
+.buy:hover {
+  background-color: green;
+}
+
+.venta {
+  color: chocolate;
+}
+
+.quitarventa {
+  color: chocolate;
+}
+
+.quitarventa:hover {
+  color: coral;
+}

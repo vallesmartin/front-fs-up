@@ -1,0 +1,25 @@
+<div class="div-dashboard">
+  <mat-card class="example-card s">
+    <div class="sale-container">
+      <img src="../assets/my.png" alt="Logo" class="img-subtitle" />
+      <mat-paginator
+        #paginator
+        class="paginator"
+        (page)="handlePageEvent($event)"
+        [length]="pagLength"
+        [pageSize]="10"
+        [disabled]="false"
+        [showFirstLastButtons]="true"
+        [hidePageSize]="true"
+        [pageIndex]="pageIndex"
+      >
+      </mat-paginator>
+    </div>
+    <div class="div-sale">
+      <div class="div-sale-2" *ngFor="let pelucheItem of misPeluches">
+        <app-peluche-my [peluche]="pelucheItem"></app-peluche-my>
+      </div>
+    </div>
+    <mat-card-content> </mat-card-content>
+  </mat-card>
+</div>

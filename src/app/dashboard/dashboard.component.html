@@ -1,0 +1,124 @@
+<mat-progress-bar
+  [class]="cssProgress"
+  color="primary"
+  mode="indeterminate"
+></mat-progress-bar>
+
+<div *ngIf="isOrderSession">
+  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide-to="0"
+        class="step"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+        class="step active"
+        aria-current="true"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+        class="step"
+      ></button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="container">
+          <a [routerLink]="" (click)="order()"
+            ><img src="../../assets/BANNER.png" height="326"
+          /></a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="container">
+          <a [routerLink]="" (click)="order()"
+            ><img src="../../assets/BANNER2.png" height="326"
+          /></a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="container">
+          <a [routerLink]="" (click)="order()"
+            ><img src="../../assets/BANNER3.jpg" height="326"
+          /></a>
+        </div>
+      </div>
+    </div>
+
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#myCarousel"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#myCarousel"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="div-dashboard div-upper">
+    <mat-card class="example-card">
+      <img src="../assets/top.png" alt="Logo" class="img-subtitle" />
+
+      <mat-card-content class="top-3-container">
+        <app-peluche-top
+          class="top-3-individual"
+          [peluche]="peluche1"
+        ></app-peluche-top>
+        <app-peluche-top
+          class="top-3-individual"
+          [peluche]="peluche2"
+        ></app-peluche-top>
+        <app-peluche-top
+          class="top-3-individual"
+          [peluche]="peluche3"
+        ></app-peluche-top>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="div-dashboard">
+    <mat-card class="example-card s">
+      <div class="sale-container">
+        <img src="../assets/venta.png" alt="Logo" class="img-subtitle" />
+        <mat-paginator
+          #paginator
+          class="paginator"
+          (page)="handlePageEvent($event)"
+          [length]="pagLength"
+          [pageSize]="10"
+          [disabled]="false"
+          [showFirstLastButtons]="true"
+          [hidePageSize]="true"
+          [pageIndex]="pageIndex"
+        >
+        </mat-paginator>
+      </div>
+      <div class="div-sale">
+        <div class="div-sale-2" *ngFor="let pelucheItem of peluchesVenta">
+          <app-peluche-item [peluche]="pelucheItem"></app-peluche-item>
+        </div>
+      </div>
+      <mat-card-content> </mat-card-content>
+    </mat-card>
+  </div>
+</div>

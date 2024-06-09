@@ -1,0 +1,37 @@
+toolbar {
+  display: none;
+}
+
+mat-card {
+  max-width: 400px;
+  margin: 2em auto;
+  text-align: center;
+}
+
+.card {
+  background: #1c1c1cf5;
+}
+
+mat-form-field {
+  display: block;
+}
+
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+.mat-form-field {
+  margin-right: 8px;
+}
+
+.progress-hidden {
+  display: none;
+}
+
+.example-full-width {
+  width: 100%;
+}

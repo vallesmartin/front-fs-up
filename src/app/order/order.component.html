@@ -1,0 +1,85 @@
+<mat-progress-bar
+  [class]="cssProgress"
+  color="primary"
+  mode="indeterminate"
+></mat-progress-bar>
+<mat-card class="card">
+  <mat-card-title
+    ><img src="../assets/custom.png" alt="Logo" class="img-subtitle"
+  /></mat-card-title>
+  <mat-card-content>
+    <div class="cont">
+      <div>
+        <div>
+          <app-peluche [peluche]="peluche"></app-peluche>
+        </div>
+      </div>
+
+      <mat-form-field>
+        <mat-label>Tipo</mat-label>
+        <select
+          matNativeControl
+          required
+          [formControl]="selectFormControl"
+          (change)="eligeTipo($event)"
+        >
+          <option value="perro">Perro</option>
+          <option value="gato">Gato</option>
+          <option value="mapache">Mapache</option>
+          <option value="oso">Oso</option>
+        </select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Color</mat-label>
+        <select
+          matNativeControl
+          required
+          [formControl]="selectFormControl"
+          (change)="eligeColor($event)"
+        >
+          <option value="natural">Sin color</option>
+          <option value="verde">Verde</option>
+          <option value="amarillo">Amarillo</option>
+          <option value="azul">Azul</option>
+          <option value="rosa">Rosa</option>
+        </select>
+      </mat-form-field>
+
+      <section class="example-section" [formGroup]="toppings">
+        <h4>Accesorios:</h4>
+        <p>
+          <mat-checkbox formControlName="pod" (change)="eligePod($event)"
+            >Pod</mat-checkbox
+          >
+        </p>
+        <p>
+          <mat-checkbox
+            formControlName="martillo"
+            (change)="eligeMartillo($event)"
+            >Martillo</mat-checkbox
+          >
+        </p>
+        <p>
+          <mat-checkbox formControlName="bola" (change)="eligeBola($event)"
+            >Bola de boliche</mat-checkbox
+          >
+        </p>
+      </section>
+    </div>
+    <mat-card-actions>
+      <mat-action-list>
+        <mat-action-row>
+          <button
+            matTooltip="Comprar ahora!"
+            mat-button
+            class="buy"
+            (click)="order()"
+          >
+            Comprar
+          </button>
+        </mat-action-row>
+      </mat-action-list>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

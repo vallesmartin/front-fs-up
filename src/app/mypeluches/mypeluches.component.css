@@ -1,0 +1,168 @@
+@use "~@angular/material" as mat;
+
+@import "~@angular/material/theming";
+
+@include mat.core();
+
+$angular-primary: mat.define-palette(mat.$deep-purple-palette, 500, 100, 900);
+$angular-accent: mat.define-palette(mat.$amber-palette, A200, A100, A400);
+$angular-warn: mat.define-palette(mat.$pink-palette);
+
+.example-card {
+  display: block;
+}
+
+mat-card {
+  margin: 10px;
+  padding: 5px;
+}
+
+table {
+  width: 100%;
+}
+
+.example-card {
+  max-width: 100%;
+  background: #424242d4;
+}
+
+.accent {
+  color: #ffd740;
+}
+
+.dash {
+  width: 1px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.icon-badge {
+  padding-top: 10;
+}
+
+.example-h2 {
+  margin: 10px;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 0 10px;
+}
+
+.progress-hidden {
+  display: none;
+}
+
+.mat-link {
+  text-decoration: none;
+  color: mat-color($angular-accent, 600);
+}
+
+.card-list-split {
+  top: 20px;
+  width: 100%;
+}
+
+.large-icon {
+  scale: 3;
+  margin: 30px;
+}
+
+.small-icon {
+  scale: 1.5;
+}
+
+.img-subtitle {
+  height: 45px; /* mantiene la proporción de aspecto */
+  padding-top: 0px;
+}
+
+.top-3-container {
+  display: flex;
+  flex-direction: row; /* Las imágenes se muestran en fila */
+  width: 100%; /* Ocupa el ancho completo de la pantalla */
+  flex-wrap: wrap; /* Permite que las imágenes se envuelvan en varias filas si es necesario */
+}
+
+.top-3-container app-peluche-top {
+  flex: 1 0 auto; /* Ocupa el espacio disponible equitativamente */
+  margin: 0; /* Elimina el margen por defecto */
+}
+
+.sale-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.paginator {
+  background-color: transparent;
+  color: white;
+}
+
+.div-sale {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.div-sale-2 {
+  margin: 8px;
+}
+
+.div-dashboard-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.img-new {
+  max-width: 100%;
+  min-height: 300px;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-banner {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.btn-buy {
+  position: relative;
+  top: -150px;
+  left: 60%;
+}
+
+.div-upper {
+  top: -180px;
+}
+
+.step {
+  background-color: orange;
+}
+
+.s {
+  min-height: 950px;
+}
+
+.carousel-control-prev-icon {
+  background-color: #484848;
+  border-radius: 10px;
+}
+
+.carousel-control-next-icon {
+  background-color: #484848;
+  border-radius: 10px;
+}

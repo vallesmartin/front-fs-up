@@ -1,0 +1,62 @@
+<mat-card class="sale">
+  <mat-card-content>
+    <div>
+      <img
+        class="peluche-img main"
+        src="{{ peluche.Image }}"
+        alt="peluche top"
+      />
+      <img
+        *ngIf="isColor"
+        class="peluche-img color"
+        src="{{ colorImage }}"
+        alt="color"
+      />
+      <img *ngIf="isBola" class="peluche-img acc" src="{{ bola }}" alt="bola" />
+      <img
+        *ngIf="isMartillo"
+        class="peluche-img acc"
+        src="{{ martillo }}"
+        alt="martillo"
+      />
+      <img *ngIf="isPod" class="peluche-img acc" src="{{ pod }}" alt="pod" />
+    </div>
+    <p>Modelo: {{ peluche.tipo }}</p>
+    <p>Color: {{ peluche.color }}</p>
+    <p>Cant. accesorios: {{ peluche.accesorios.length }}</p>
+  </mat-card-content>
+  <mat-card-subtitle>De: {{ peluche.email }}</mat-card-subtitle>
+
+  <mat-card-actions>
+    <button
+      matTooltip="Poner en venta"
+      class="favorito"
+      mat-icon-button
+      aria-label="Example icon button with a vertical three dot icon"
+      (click)="sell()"
+      *ngIf="!peluche.venta"
+    >
+      <mat-icon>sell</mat-icon>
+    </button>
+
+    <button
+      matTooltip="Quitar de venta"
+      class="quitarventa"
+      mat-icon-button
+      aria-label="Example icon button with a vertical three dot icon"
+      (click)="unsell()"
+      *ngIf="peluche.venta"
+    >
+      <mat-icon>backspace</mat-icon>
+    </button>
+    <button
+      matTooltip="Eliminar peluche"
+      class="eliminar"
+      mat-icon-button
+      aria-label="Example icon button with a vertical three dot icon"
+      (click)="delete()"
+    >
+      <mat-icon>delete_forever</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

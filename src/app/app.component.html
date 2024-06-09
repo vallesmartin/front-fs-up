@@ -1,0 +1,67 @@
+<mat-toolbar color="primary" class="toolbar" id="top">
+  <a routerLink="/dashboard">
+    <img src="../assets/logo.png" alt="Logo" class="logo" href="" />
+  </a>
+  <span class="example-spacer"></span>
+  <button *ngIf="!isUserValid()" class="btn-nav-option" (click)="irLogin()">
+    Iniciar sesión
+  </button>
+  <span *ngIf="!isUserValid()">|</span>
+  <button *ngIf="!isUserValid()" class="btn-nav-option" (click)="irSignIn()">
+    Registrarme
+  </button>
+  <span
+    class="toolbar-user"
+    *ngIf="isUserValid()"
+    [matMenuTriggerFor]="menu2"
+    >{{ userName | uppercase }}</span
+  >
+  <button
+    matTooltip="Cuenta"
+    *ngIf="isUserValid()"
+    mat-icon-button
+    [matMenuTriggerFor]="menu2"
+    aria-label="Example icon-button with a menu"
+  >
+    <mat-icon>person</mat-icon>
+  </button>
+  <span *ngIf="isUserValid()">|</span>
+  <button
+    matTooltip="Ir a Mis Peluches"
+    *ngIf="isUserValid()"
+    mat-icon-button
+    aria-label="Example icon-button with a menu"
+    (click)="gotoMy()"
+  >
+    <mat-icon>android</mat-icon>
+  </button>
+  <span *ngIf="isUserValid()">|</span>
+  <button
+    matTooltip="Ir al Carrito"
+    *ngIf="isUserValid()"
+    mat-icon-button
+    aria-label="Example icon-button with a menu"
+  >
+    <mat-icon *ngIf="badge" [matBadge]="badge" matBadgeColor="warn"
+      >shopping_cart</mat-icon
+    >
+    <mat-icon *ngIf="!badge" matBadgeColor="warn">shopping_cart</mat-icon>
+  </button>
+  <mat-menu #menu2="matMenu">
+    <button mat-menu-item routerLink="logindata">
+      <mat-icon>vpn_key</mat-icon>
+      <span>Cambiar contraseña</span>
+    </button>
+    <!--<button mat-menu-item routerLink="test-page">
+      <mat-icon>palette</mat-icon>
+      <span>Testing</span>
+    </button>-->
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      <span>Cerrar sesion</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>
+<div class="container body-content">
+  <router-outlet></router-outlet>
+</div>

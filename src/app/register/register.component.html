@@ -1,0 +1,71 @@
+<div *ngIf="reg" id="top">
+  <mat-progress-bar
+    [class]="cssProgress"
+    color="primary"
+    mode="indeterminate"
+  ></mat-progress-bar>
+  <mat-card class="card">
+    <mat-card-title>Registro de usuario</mat-card-title>
+    <mat-card-subtitle>Para poder comprar tus peluches</mat-card-subtitle>
+    <mat-card-content>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Nombre" [formControl]="name" required />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input
+          matInput
+          placeholder="Apellido"
+          [formControl]="lastname"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input
+          matInput
+          placeholder="E-mail"
+          [formControl]="username"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Contraseña</mat-label>
+        <input
+          matInput
+          [formControl]="password"
+          [type]="hide ? 'password' : 'text'"
+          required
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Repetir contraseña</mat-label>
+        <input
+          matInput
+          [formControl]="password2"
+          [type]="hide ? 'password' : 'text'"
+          required
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="register()">
+        Registrarme
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>

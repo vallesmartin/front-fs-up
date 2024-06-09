@@ -1,0 +1,28 @@
+<div style="display: flex">
+  <h1 mat-dialog-title>Advertencia</h1>
+  <mat-icon
+    style="color: rgb(255, 238, 0); scale: 2; margin-left: 20px; flex: 0"
+    >warning</mat-icon
+  >
+</div>
+<div mat-dialog-content>Desea eliminar el peluche?</div>
+<div mat-dialog-actions>
+  <button
+    mat-button
+    mat-raised-button
+    color="primary"
+    cdkFocusInitial
+    (click)="deleteOption()"
+    class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"
+  >
+    Si
+  </button>
+  <button
+    mat-button
+    color="primary"
+    (click)="cancel()"
+    class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"
+  >
+    No
+  </button>
+</div>

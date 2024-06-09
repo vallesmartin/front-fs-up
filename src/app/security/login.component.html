@@ -1,0 +1,35 @@
+<mat-progress-bar
+  [class]="cssProgress"
+  color="primary"
+  mode="indeterminate"
+></mat-progress-bar>
+<mat-card class="card">
+  <mat-card-title>Iniciá sesión</mat-card-title>
+  <mat-card-subtitle>Para comprar y vender peluches</mat-card-subtitle>
+  <mat-card-content>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Usuario" [formControl]="username" required />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Ingrese contraseña</mat-label>
+      <input
+        matInput
+        [formControl]="password"
+        [type]="hide ? 'password' : 'text'"
+        required
+      />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="login()">
+      Ingresar
+    </button>
+  </mat-card-content>
+</mat-card>

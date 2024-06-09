@@ -1,0 +1,27 @@
+<div style="display: flex">
+  <h1 mat-dialog-title>Compra exitosa!</h1>
+  <mat-icon style="color: #1cff00; scale: 2; margin-left: 20px; flex: 0"
+    >check_circle</mat-icon
+  >
+</div>
+<div mat-dialog-content>A dónde vamos ahora?</div>
+<div mat-dialog-actions>
+  <button
+    mat-button
+    mat-raised-button
+    color="primary"
+    cdkFocusInitial
+    (click)="gotoKeep()"
+    class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"
+  >
+    Seguir comprando
+  </button>
+  <button
+    mat-button
+    color="primary"
+    (click)="gotoMyPeluches()"
+    class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"
+  >
+    Ver mis peluches
+  </button>
+</div>

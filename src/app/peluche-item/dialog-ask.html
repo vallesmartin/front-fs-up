@@ -1,0 +1,24 @@
+<div style="display: flex">
+  <h1 mat-dialog-title>Comprar peluche</h1>
+</div>
+<div mat-dialog-content>Desea comprar el peluche?</div>
+<div mat-dialog-actions>
+  <button
+    mat-button
+    mat-raised-button
+    color="primary"
+    cdkFocusInitial
+    (click)="buy()"
+    class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"
+  >
+    Si
+  </button>
+  <button
+    mat-button
+    color="primary"
+    (click)="cancel()"
+    class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"
+  >
+    No
+  </button>
+</div>

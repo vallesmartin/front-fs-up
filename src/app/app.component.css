@@ -1,0 +1,84 @@
+section {
+  display: table;
+}
+
+.logo {
+  width: 350px; /* ajusta el ancho según sea necesario */
+  height: auto; /* mantiene la proporción de aspecto */
+  margin-right: 20px; /* ajusta el margen según sea necesario */
+  padding-top: 5px;
+}
+
+.btn-nav-option {
+  color: white;
+  background-color: transparent;
+  border-style: none;
+}
+
+.btn-nav-option:hover {
+  color: white;
+  background-color: #51269e;
+  border-style: none;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  width: 490px;
+}
+
+.example-button-row .mat-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-container-info {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+.example-spacer {
+  width: 100%;
+}
+
+.example-route {
+  text-decoration: none;
+  color: inherit;
+}
+
+.progress-hidden {
+  display: none;
+}
+
+.toolbar-user {
+  font-size: 12px;
+}
+
+.toolbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10; /* Asegura que la barra de herramientas esté sobre el contenido */
+}
+
+.body-content {
+  margin-top: 74px; /* La altura de tu mat-toolbar */
+}

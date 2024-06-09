@@ -1,0 +1,17 @@
+<div>
+  <img class="peluche-img main" src="{{ peluche.Image }}" alt="peluche top" />
+  <img
+    *ngIf="isColor"
+    class="peluche-img color"
+    src="{{ colorImage }}"
+    alt="color"
+  />
+  <img *ngIf="isBola" class="peluche-img acc" src="{{ bola }}" alt="bola" />
+  <img
+    *ngIf="isMartillo"
+    class="peluche-img acc"
+    src="{{ martillo }}"
+    alt="martillo"
+  />
+  <img *ngIf="isPod" class="peluche-img acc" src="{{ pod }}" alt="pod" />
+</div>

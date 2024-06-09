@@ -1,0 +1,23 @@
+<div style="display: flex">
+  <h1 mat-dialog-title>Ups! No tenés peluches</h1>
+</div>
+<div mat-dialog-actions>
+  <button
+    mat-button
+    mat-raised-button
+    color="primary"
+    cdkFocusInitial
+    (click)="gotoOrder()"
+    class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"
+  >
+    Comprar uno
+  </button>
+  <button
+    mat-button
+    color="primary"
+    (click)="gotoDashboard()"
+    class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"
+  >
+    Ir al MarketPlace
+  </button>
+</div>

@@ -1,0 +1,57 @@
+.sale {
+  background: #1c1c1cf5;
+}
+
+.peluche-top-img {
+  height: 180px;
+}
+
+.peluche {
+  width: 20px;
+}
+
+.peluche-img {
+  height: 200px;
+}
+
+.acc {
+  position: absolute;
+  left: 29px;
+}
+
+.color {
+  position: absolute;
+  left: 16px;
+}
+
+.carrito {
+  color: white;
+}
+
+.carritoUsed {
+  color: yellow;
+}
+
+.carrito:hover {
+  color: yellow;
+}
+
+.favorito {
+  color: burlywood;
+}
+
+.favoritoUsed {
+  color: yellow;
+}
+
+.favorito:hover {
+  color: yellow;
+}
+
+.buy {
+  background-color: darkgreen;
+}
+
+.buy:hover {
+  background-color: green;
+}

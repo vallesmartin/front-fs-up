@@ -1,0 +1,3 @@
+export enum GLOBAL {
+    TIMELAPSE_REFRESH_MONITORS = 6000
+}
